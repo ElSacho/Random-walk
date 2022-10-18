@@ -39,7 +39,6 @@ def dessinerLabel(labels):
                 break
             print(f"Labelisation de la section numero {labelActuel}")
 
-
 def remplir_vecteur_label(labels, action, serie, size = 1):
     
     global ecran
@@ -51,8 +50,7 @@ def remplir_vecteur_label(labels, action, serie, size = 1):
         for j in range(size):
             if i+action[1]<labels.shape[0] and j+action[0]<labels.shape[1]:
                 labels[i+action[1],j+action[0]]=serie
-
-    
+  
 def creer_les_labels(img, nbr_labels):
 
     global continuer
@@ -335,8 +333,6 @@ def drawResult(imgLabel,image):
     cv2.waitKey(0)
 
     cv2.destroyAllWindows() 
-    
-
     
 def main(image, beta):
 
